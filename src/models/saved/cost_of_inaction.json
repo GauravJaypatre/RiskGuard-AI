@@ -1,0 +1,23 @@
+[
+  {
+    "name": "No System",
+    "total_loss": 5334018.34,
+    "fp_cost": 0.0,
+    "fn_cost": 5334018.34,
+    "detected_fraud_pct": 0.0
+  },
+  {
+    "name": "Static Rules",
+    "total_loss": 4152356.83,
+    "fp_cost": 50.0,
+    "fn_cost": 4152306.83,
+    "detected_fraud_pct": 14.4
+  },
+  {
+    "name": "RiskGuard AI",
+    "total_loss": 302624.89,
+    "fp_cost": 34050.0,
+    "fn_cost": 268574.89,
+    "detected_fraud_pct": 94.7
+  }
+]

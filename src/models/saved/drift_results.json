@@ -1,0 +1,162 @@
+[
+  {
+    "day": 1,
+    "date": "2026-08-15",
+    "status": "CRITICAL",
+    "baseline_risk_rate": 0.0646,
+    "current_risk_rate": 0.8963,
+    "validation_passed": null
+  },
+  {
+    "day": 2,
+    "date": "2026-08-16",
+    "status": "CRITICAL",
+    "baseline_risk_rate": 0.0646,
+    "current_risk_rate": 0.8224,
+    "validation_passed": null
+  },
+  {
+    "day": 3,
+    "date": "2026-08-17",
+    "status": "CRITICAL",
+    "baseline_risk_rate": 0.0646,
+    "current_risk_rate": 0.683,
+    "validation_passed": null
+  },
+  {
+    "day": 4,
+    "date": "2026-08-18",
+    "status": "CRITICAL",
+    "baseline_risk_rate": 0.0646,
+    "current_risk_rate": 0.5811,
+    "validation_passed": null
+  },
+  {
+    "day": 5,
+    "date": "2026-08-19",
+    "status": "CRITICAL",
+    "baseline_risk_rate": 0.0646,
+    "current_risk_rate": 0.5075,
+    "validation_passed": null
+  },
+  {
+    "day": 6,
+    "date": "2026-08-20",
+    "status": "MONITOR",
+    "baseline_risk_rate": 0.0646,
+    "current_risk_rate": 0.0209,
+    "validation_passed": false
+  },
+  {
+    "day": 7,
+    "date": "2026-08-21",
+    "status": "MONITOR",
+    "baseline_risk_rate": 0.0646,
+    "current_risk_rate": 0.0158,
+    "validation_passed": false
+  },
+  {
+    "day": 8,
+    "date": "2026-08-22",
+    "status": "MONITOR",
+    "baseline_risk_rate": 0.0646,
+    "current_risk_rate": 0.0143,
+    "validation_passed": false
+  },
+  {
+    "day": 9,
+    "date": "2026-08-23",
+    "status": "MONITOR",
+    "baseline_risk_rate": 0.0646,
+    "current_risk_rate": 0.0018,
+    "validation_passed": false
+  },
+  {
+    "day": 10,
+    "date": "2026-08-24",
+    "status": "MONITOR",
+    "baseline_risk_rate": 0.0646,
+    "current_risk_rate": 0.0072,
+    "validation_passed": true
+  },
+  {
+    "day": 11,
+    "date": "2026-08-25",
+    "status": "NEW_NORMAL",
+    "baseline_risk_rate": 0.0517,
+    "current_risk_rate": 0.0088,
+    "validation_passed": true
+  },
+  {
+    "day": 12,
+    "date": "2026-08-26",
+    "status": "NEW_NORMAL",
+    "baseline_risk_rate": 0.0388,
+    "current_risk_rate": 0.0015,
+    "validation_passed": true
+  },
+  {
+    "day": 13,
+    "date": "2026-08-27",
+    "status": "NEW_NORMAL",
+    "baseline_risk_rate": 0.0258,
+    "current_risk_rate": 0.001,
+    "validation_passed": true
+  },
+  {
+    "day": 14,
+    "date": "2026-08-28",
+    "status": "NEW_NORMAL",
+    "baseline_risk_rate": 0.0129,
+    "current_risk_rate": 0.0033,
+    "validation_passed": true
+  },
+  {
+    "day": 15,
+    "date": "2026-08-29",
+    "status": "NEW_NORMAL",
+    "baseline_risk_rate": 0.0,
+    "current_risk_rate": 0.0042,
+    "validation_passed": true
+  },
+  {
+    "day": 16,
+    "date": "2026-08-30",
+    "status": "NEW_NORMAL",
+    "baseline_risk_rate": 0.0,
+    "current_risk_rate": 0.0024,
+    "validation_passed": true
+  },
+  {
+    "day": 17,
+    "date": "2026-08-31",
+    "status": "NEW_NORMAL",
+    "baseline_risk_rate": 0.0,
+    "current_risk_rate": 0.0,
+    "validation_passed": true
+  },
+  {
+    "day": 18,
+    "date": "2026-09-01",
+    "status": "NEW_NORMAL",
+    "baseline_risk_rate": 0.0,
+    "current_risk_rate": 0.0,
+    "validation_passed": true
+  },
+  {
+    "day": 19,
+    "date": "2026-09-02",
+    "status": "NEW_NORMAL",
+    "baseline_risk_rate": 0.0,
+    "current_risk_rate": 0.0057,
+    "validation_passed": true
+  },
+  {
+    "day": 20,
+    "date": "2026-09-03",
+    "status": "NEW_NORMAL",
+    "baseline_risk_rate": 0.0,
+    "current_risk_rate": 0.0043,
+    "validation_passed": true
+  }
+]

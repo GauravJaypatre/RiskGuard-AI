@@ -1,0 +1,10 @@
+{
+  "total_transactions": 123167,
+  "active_alerts": 4,
+  "total_exposure": 5663022.48,
+  "high_confidence_exposure": 3762795.02,
+  "current_risk_rate": 0.0188,
+  "flagged_count": 2521,
+  "best_model": "XGBoost",
+  "model_pr_auc": 0.7913
+}

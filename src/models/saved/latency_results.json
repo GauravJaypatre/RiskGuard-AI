@@ -1,0 +1,8 @@
+{
+  "ml_inference_ms": 2.19,
+  "agent_investigation_ms": 12845.0,
+  "end_to_end_ms": 12847.2,
+  "events_per_sec": 456516.8,
+  "batch_size": 1000,
+  "agent_measured": true
+}

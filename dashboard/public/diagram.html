@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RiskGuard AI — Architecture Diagram</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+      background-color: #0c0f17;
+      background-image: 
+        radial-gradient(circle at 18% 25%, rgba(59, 130, 246, 0.12) 0%, transparent 45%),
+        radial-gradient(circle at 50% 30%, rgba(245, 158, 11, 0.10) 0%, transparent 45%),
+        radial-gradient(circle at 82% 25%, rgba(16, 185, 129, 0.12) 0%, transparent 45%),
+        radial-gradient(circle at 50% 90%, rgba(30, 41, 59, 0.3) 0%, transparent 60%);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: #f8fafc;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 60px 80px 50px 80px;
+    }
+
+    /* ── Header ── */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .logo-badge {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(16, 185, 129, 0.2));
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    .brand-title {
+      font-size: 38px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #ffffff 30%, #94a3b8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.1;
+    }
+
+    .brand-subtitle {
+      font-size: 16px;
+      font-weight: 500;
+      color: #94a3b8;
+      letter-spacing: 0.2px;
+      margin-top: 4px;
+    }
+
+    .track-tag {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 8px 18px;
+      border-radius: 30px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #cbd5e1;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .track-tag .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #3b82f6;
+      box-shadow: 0 0 10px #3b82f6;
+    }
+
+    /* ── Main Canvas (3 Layers + Connectors) ── */
+    .diagram-stage {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 24px;
+      margin: auto 0;
+      height: 640px;
+    }
+
+    /* ── Layer Container ── */
+    .layer-card {
+      flex: 1;
+      border-radius: 24px;
+      background: rgba(18, 24, 38, 0.7);
+      backdrop-filter: blur(24px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 34px 28px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+      transition: all 0.3s ease;
+    }
+
+    /* Layer Glow & Border Accents */
+    .layer-card.blue {
+      border-color: rgba(59, 130, 246, 0.35);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 40px rgba(59, 130, 246, 0.08);
+    }
+    .layer-card.amber {
+      border-color: rgba(245, 158, 11, 0.35);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 40px rgba(245, 158, 11, 0.08);
+    }
+    .layer-card.green {
+      border-color: rgba(16, 185, 129, 0.35);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 40px rgba(16, 185, 129, 0.08);
+    }
+
+    /* Header inside layer card */
+    .layer-header {
+      margin-bottom: 26px;
+      position: relative;
+    }
+
+    .layer-tag {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+
+    .layer-card.blue .layer-tag {
+      background: rgba(59, 130, 246, 0.15);
+      color: #60a5fa;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+    }
+    .layer-card.amber .layer-tag {
+      background: rgba(245, 158, 11, 0.15);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+    .layer-card.green .layer-tag {
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .layer-title {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .layer-subtitle {
+      font-size: 14px;
+      color: #94a3b8;
+      font-weight: 500;
+      margin-top: 4px;
+    }
+
+    /* Sub-components container */
+    .subcomponents {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      flex: 1;
+      justify-content: center;
+    }
+
+    .component-item {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      position: relative;
+    }
+
+    .layer-card.blue .component-item {
+      border-left: 4px solid #3b82f6;
+    }
+    .layer-card.amber .component-item {
+      border-left: 4px solid #f59e0b;
+    }
+    .layer-card.green .component-item {
+      border-left: 4px solid #10b981;
+    }
+
+    .component-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    .component-info {
+      flex: 1;
+    }
+
+    .component-name {
+      font-size: 16px;
+      font-weight: 700;
+      color: #f1f5f9;
+      margin-bottom: 4px;
+      letter-spacing: -0.2px;
+    }
+
+    .component-desc {
+      font-size: 13px;
+      color: #94a3b8;
+      line-height: 1.35;
+      font-weight: 400;
+    }
+
+    /* ── Flow Connectors (Arrows between layers) ── */
+    .flow-connector {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 80px;
+      position: relative;
+    }
+
+    .flow-pill {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      background: #1e293b;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #f8fafc;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      z-index: 2;
+    }
+
+    .arrow-track {
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .arrow-head {
+      width: 0;
+      height: 0;
+      border-top: 7px solid transparent;
+      border-bottom: 7px solid transparent;
+      border-left: 10px solid #cbd5e1;
+      margin-right: -4px;
+    }
+
+    /* ── Footer / Caption ── */
+    .footer-caption {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .caption-pill {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: rgba(18, 24, 38, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 12px 32px;
+      border-radius: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .caption-step {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .caption-step.c1 { color: #60a5fa; }
+    .caption-step.c2 { color: #fbbf24; }
+    .caption-step.c3 { color: #34d399; }
+
+    .caption-arrow {
+      color: #64748b;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="header">
+    <div class="brand-group">
+      <div class="logo-badge">🛡️</div>
+      <div>
+        <h1 class="brand-title">RiskGuard AI</h1>
+        <div class="brand-subtitle">Autonomous Risk Intelligence & Fraud Investigation Architecture</div>
+      </div>
+    </div>
+    <div class="track-tag">
+      <span class="dot"></span>
+      Razorpay AI Buildathon &bull; AI Risk Manager
+    </div>
+  </header>
+
+  <!-- Main 3-Layer Diagram Stage -->
+  <main class="diagram-stage">
+
+    <!-- LAYER 1: DETECTION (Blue) -->
+    <section class="layer-card blue">
+      <div class="layer-header">
+        <span class="layer-tag">LAYER 1</span>
+        <h2 class="layer-title">DETECTION</h2>
+        <div class="layer-subtitle">Statistical & Behavioral Threat Discovery</div>
+      </div>
+      <div class="subcomponents">
+        <div class="component-item">
+          <div class="component-icon">⚡</div>
+          <div class="component-info">
+            <div class="component-name">XGBoost Real-Time Scoring</div>
+            <div class="component-desc">Real-time transaction inference with cost-asymmetric probability calibration</div>
+          </div>
+        </div>
+        <div class="component-item">
+          <div class="component-icon">📊</div>
+          <div class="component-info">
+            <div class="component-name">Merchant Behavioral Baselining</div>
+            <div class="component-desc">Continuous daily volume, risk, and failure z-score deviation tracking (&ge;2.0&sigma;)</div>
+          </div>
+        </div>
+        <div class="component-item">
+          <div class="component-icon">🕸️</div>
+          <div class="component-info">
+            <div class="component-name">Graph-Based Relationship Engine</div>
+            <div class="component-desc">Bipartite customer-device clustering to uncover distributed abuse rings</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Connector 1 -> 2: flags -->
+    <div class="flow-connector">
+      <div class="flow-pill">flags</div>
+      <div class="arrow-track">
+        <div class="arrow-head"></div>
+      </div>
+    </div>
+
+    <!-- LAYER 2: EXPLAINABILITY (Amber) -->
+    <section class="layer-card amber">
+      <div class="layer-header">
+        <span class="layer-tag">LAYER 2</span>
+        <h2 class="layer-title">EXPLAINABILITY</h2>
+        <div class="layer-subtitle">Financial Exposure & Actionable Interpretability</div>
+      </div>
+      <div class="subcomponents">
+        <div class="component-item">
+          <div class="component-info">
+            <div class="component-name" style="display:flex;align-items:center;gap:10px;">
+              <span>💰</span> Financial Exposure Estimation
+            </div>
+            <div class="component-desc" style="margin-top:6px;">
+              Potential exposure (threshold &ge; 0.33) vs high-confidence exposure (&ge; 0.80)
+            </div>
+          </div>
+        </div>
+        <div class="component-item">
+          <div class="component-info">
+            <div class="component-name" style="display:flex;align-items:center;gap:10px;">
+              <span>🔄</span> Counterfactual Engine
+            </div>
+            <div class="component-desc" style="margin-top:6px;">
+              Nearest minimal feature perturbations required to flip an alert decision
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Connector 2 -> 3: investigates -->
+    <div class="flow-connector">
+      <div class="flow-pill">investigates</div>
+      <div class="arrow-track">
+        <div class="arrow-head"></div>
+      </div>
+    </div>
+
+    <!-- LAYER 3: AUTONOMOUS AGENT (Green) -->
+    <section class="layer-card green">
+      <div class="layer-header">
+        <span class="layer-tag">LAYER 3</span>
+        <h2 class="layer-title">AUTONOMOUS AGENT</h2>
+        <div class="layer-subtitle">Policy-Bounded Agentic Investigation</div>
+      </div>
+      <div class="subcomponents">
+        <div class="component-item">
+          <div class="component-icon">🤖</div>
+          <div class="component-info">
+            <div class="component-name">Gemini-Powered Investigation Agent</div>
+            <div class="component-desc">Autonomous multi-turn reasoning and dynamic tool orchestration</div>
+          </div>
+        </div>
+        <div class="component-item">
+          <div class="component-icon">🧰</div>
+          <div class="component-info">
+            <div class="component-name">10-Tool Operational Toolkit</div>
+            <div class="component-desc">Transaction, customer, device, velocity, baseline, and policy lookups</div>
+          </div>
+        </div>
+        <div class="component-item">
+          <div class="component-icon">📝</div>
+          <div class="component-info">
+            <div class="component-name">Case Creation & Audit Trail</div>
+            <div class="component-desc">Structured evidence synthesis, fraud ring mapping, and policy action output</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Bottom Caption -->
+  <footer class="footer-caption">
+    <div class="caption-pill">
+      <div class="caption-step c1">● Detection</div>
+      <div class="caption-arrow">&rarr;</div>
+      <div class="caption-step c2">● Explainability</div>
+      <div class="caption-arrow">&rarr;</div>
+      <div class="caption-step c3">● Autonomous Investigation</div>
+    </div>
+  </footer>
+
+</body>
+</html>

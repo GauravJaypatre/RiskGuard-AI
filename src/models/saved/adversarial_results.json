@@ -1,0 +1,18 @@
+{
+  "naive_rule_detection_rate": {
+    "normal": 0.0,
+    "fraud_spike": 1.0,
+    "slow_ring": 0.0,
+    "flash_sale": 0.0
+  },
+  "riskguard_detection_rate": {
+    "normal": 0.0,
+    "fraud_spike": 1.0,
+    "slow_ring": 0.9384149419485108,
+    "flash_sale": 0.0
+  },
+  "naive_rule_fp_rate": 0.0,
+  "riskguard_fp_rate": 0.0056,
+  "exposure_missed_naive": 4102781.83,
+  "exposure_missed_riskguard": 265524.89
+}

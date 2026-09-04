@@ -1,0 +1,30 @@
+# RiskGuard AI — Dependencies
+# Python 3.10+
+
+# Core data / ML
+pandas>=2.0.0
+numpy>=1.24.0
+scikit-learn>=1.3.0
+xgboost>=2.0.0
+scipy>=1.11.0
+
+# Graph analysis
+networkx>=3.1
+
+# API framework
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+pydantic>=2.0.0
+
+# Gemini API (investigation agent)
+google-genai>=1.0.0
+
+# Utilities
+python-dotenv>=1.0.0
+joblib>=1.3.0
+tqdm>=4.66.0
+pillow>=10.0.0  # For diagram generation script
+
+# Testing
+pytest>=7.4.0
+httpx>=0.25.0  # For FastAPI test client

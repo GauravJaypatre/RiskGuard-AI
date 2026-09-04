@@ -1,0 +1,260 @@
+{
+  "total": {
+    "potential_exposure": 5663022.48,
+    "high_confidence_exposure": 3762795.02,
+    "flagged_count": 2521,
+    "high_confidence_count": 1711
+  },
+  "per_merchant": {
+    "MER-0000": {
+      "potential_exposure": 0.0,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 0
+    },
+    "MER-0001": {
+      "potential_exposure": 0.0,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 0
+    },
+    "MER-0002": {
+      "potential_exposure": 188978.08,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 30
+    },
+    "MER-0003": {
+      "potential_exposure": 0.0,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 0
+    },
+    "MER-0004": {
+      "potential_exposure": 0.0,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 0
+    },
+    "MER-0005": {
+      "potential_exposure": 0.0,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 0
+    },
+    "MER-0006": {
+      "potential_exposure": 0.0,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 0
+    },
+    "MER-0007": {
+      "potential_exposure": 0.0,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 0
+    },
+    "MER-0008": {
+      "potential_exposure": 155483.69,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 53
+    },
+    "MER-0009": {
+      "potential_exposure": 0.0,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 0
+    },
+    "MER-0010": {
+      "potential_exposure": 0.0,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 0
+    },
+    "MER-0011": {
+      "potential_exposure": 9784.12,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 2
+    },
+    "MER-0012": {
+      "potential_exposure": 1960941.4,
+      "high_confidence_exposure": 1451198.44,
+      "flagged_count": 686
+    },
+    "MER-0013": {
+      "potential_exposure": 0.0,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 0
+    },
+    "MER-0014": {
+      "potential_exposure": 0.0,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 0
+    },
+    "MER-0015": {
+      "potential_exposure": 0.0,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 0
+    },
+    "MER-0016": {
+      "potential_exposure": 44060.79,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 9
+    },
+    "MER-0017": {
+      "potential_exposure": 0.0,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 0
+    },
+    "MER-0018": {
+      "potential_exposure": 0.0,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 0
+    },
+    "MER-0019": {
+      "potential_exposure": 0.0,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 0
+    },
+    "MER-0020": {
+      "potential_exposure": 0.0,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 0
+    },
+    "MER-0021": {
+      "potential_exposure": 0.0,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 0
+    },
+    "MER-0022": {
+      "potential_exposure": 0.0,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 0
+    },
+    "MER-0023": {
+      "potential_exposure": 1040599.61,
+      "high_confidence_exposure": 942339.31,
+      "flagged_count": 618
+    },
+    "MER-0024": {
+      "potential_exposure": 203471.88,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 64
+    },
+    "MER-0025": {
+      "potential_exposure": 0.0,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 0
+    },
+    "MER-0026": {
+      "potential_exposure": 0.0,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 0
+    },
+    "MER-0027": {
+      "potential_exposure": 4817.73,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 1
+    },
+    "MER-0028": {
+      "potential_exposure": 139309.02,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 56
+    },
+    "MER-0029": {
+      "potential_exposure": 0.0,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 0
+    },
+    "MER-0030": {
+      "potential_exposure": 0.0,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 0
+    },
+    "MER-0031": {
+      "potential_exposure": 0.0,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 0
+    },
+    "MER-0032": {
+      "potential_exposure": 1510735.16,
+      "high_confidence_exposure": 1267263.82,
+      "flagged_count": 541
+    },
+    "MER-0033": {
+      "potential_exposure": 0.0,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 0
+    },
+    "MER-0034": {
+      "potential_exposure": 68834.31,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 14
+    },
+    "MER-0035": {
+      "potential_exposure": 9738.26,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 2
+    },
+    "MER-0036": {
+      "potential_exposure": 38723.8,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 8
+    },
+    "MER-0037": {
+      "potential_exposure": 228766.27,
+      "high_confidence_exposure": 101993.45,
+      "flagged_count": 425
+    },
+    "MER-0038": {
+      "potential_exposure": 0.0,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 0
+    },
+    "MER-0039": {
+      "potential_exposure": 0.0,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 0
+    },
+    "MER-0040": {
+      "potential_exposure": 0.0,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 0
+    },
+    "MER-0041": {
+      "potential_exposure": 0.0,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 0
+    },
+    "MER-0042": {
+      "potential_exposure": 0.0,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 0
+    },
+    "MER-0043": {
+      "potential_exposure": 0.0,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 0
+    },
+    "MER-0044": {
+      "potential_exposure": 0.0,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 0
+    },
+    "MER-0045": {
+      "potential_exposure": 0.0,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 0
+    },
+    "MER-0046": {
+      "potential_exposure": 0.0,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 0
+    },
+    "MER-0047": {
+      "potential_exposure": 0.0,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 0
+    },
+    "MER-0048": {
+      "potential_exposure": 58778.36,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 12
+    },
+    "MER-0049": {
+      "potential_exposure": 0.0,
+      "high_confidence_exposure": 0.0,
+      "flagged_count": 0
+    }
+  }
+}
